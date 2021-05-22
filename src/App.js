@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import start from './media/actions/start.svg'
 import stop from './media/actions/stop.svg'
 
@@ -90,6 +90,20 @@ function App() {
       dragging: false
     })
   }
+
+  // Saving state to local storage
+
+  useEffect(() => {
+    const data = localStorage.getItem('locationProps');
+
+    if(data) {
+      setLocationProps(JSON.parse(data));
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('locationProps', JSON.stringify(locationProps))
+  })
 
 
   return (

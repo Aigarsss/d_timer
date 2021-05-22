@@ -3,9 +3,8 @@
   height: 40vmin;
   pointer-events: none;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%,-50%);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -17,12 +16,10 @@
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
-
+    transform: translate(-50%,-50%) rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
-
+    transform: translate(-50%,-50%) rotate(360deg);
   }
 }
 
@@ -30,8 +27,8 @@
   position: absolute;
   width: 159px;
   height: 50px;
-  left: 100px;
-  top: 100px;
+  top: 10%;
+  left: 10%;
   background: #333C43;
   border: 1px solid #262C30;
   box-sizing: border-box;
