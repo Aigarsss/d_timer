@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
-}
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+    border-radius: 50%;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
+
   }
   to {
     transform: rotate(360deg);
+
   }
 }
+
+.timerContainer {
+  position: absolute;
+  width: 159px;
+  height: 50px;
+  left: 100px;
+  top: 100px;
+  background: #333C43;
+  border: 1px solid #262C30;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 11px 12px 11px 12.5px;
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.timerMove {
+  background-image: url('./media/actions/move.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+}
+
+.timerMove:hover {
+  cursor: pointer;
+}
+
+.timerMove:active {
+  background-image: url('./media/actions/move_inprogress.svg');
+}
+
+.timerAction {
+  display: flex;
+  width:18px;
+  margin-right: 11px;
+  cursor: pointer;
+  margin-left: 18px;  
+}
+
+.timerTime {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: #fff;
+}
+
+
